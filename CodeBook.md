@@ -10,8 +10,8 @@ All functions and variables used in this code have been described as under.
 
 ### Variables
 
-  * 'data' : numeric variable, which stores the input matrix 
-  * 'x'    : numeric variable, which accepts the user-input matrix
+  * `data` : numeric variable, which stores the input matrix 
+  * `x`    : numeric variable, which accepts the user-input matrix
   * 'maty' : numeric variable, storing the input matrix locally, within the 'set()' inner function(which is part of 'makeCacheMatrix()' function)
   * 'inv'  : numeric variable, storing inverse of the input matrix
   * 'functionPointer': List, with elements as innner function pointers
