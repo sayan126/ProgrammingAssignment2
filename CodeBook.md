@@ -2,7 +2,7 @@
 
 The cachematrix.R file accepts a matrix as input. It then computes and returns the inverse of this input matrix. The code in this script file assumes that the input matrix is invertible.
 
-The cached memory feature is used here, to avoid calculating data that may have been already calculated previous. Also, the 'solve()' function in R is used here, to invert the input matrix.
+The cached memory feature is used here, to avoid calculating data that may have been already calculated previous. Also, the ``solve()`` function in R is used here, to invert the input matrix.
 
 There are two functions in this file: 'makeCacheMatrix()' and 'cacheSolve()'.
  
