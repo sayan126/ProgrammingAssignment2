@@ -113,16 +113,18 @@ cacheSolve <- function(x,...)
 
 ## This section compares the input matrix to the previous matrix
 ## If the two values are same, flag <- "oldData", in which case 
-## matrix inverse is retrieved from cache memory. If the values
+## inverse matrix is retrieved from cache memory. If the values
 ## are different, flag <- "newData", in which case the inverse 
 ## of this new matrix is calculated
 	
-	flag <- "oldData"
-
-	if(nrow(data)!=nrow(x) || ncol(data)!=ncol(x)) flag <-"newData"
-
-	if(!is.null(data) && nrow(data)==nrow(x) && ncol(data)==ncol(x))
+	if(is.null(data) || nrow(data)!=nrow(x) || ncol(data)!=ncol(x))
 	{
+		flag <- "newData"
+	}
+	
+	else if(!is.null(data) && nrow(data)==nrow(x) && ncol(data)==ncol(x))
+	{
+		flag <- "oldData"
 		compare <- data == x
 		for(i in seq_along(nrow(data)))
 		{
