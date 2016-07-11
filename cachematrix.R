@@ -17,11 +17,11 @@
 ## value to cache memory.  
 
 ## This program consists of two functions: makeCacheMatrix() and 
-## cacheSolve(). These functions have been described near the 
+## cacheSolve(). These functions have been further described near the 
 ## respective function bodies. 
 
 
-##================= makeCacheMatrix() function ===================##
+##================= makeCacheMatrix() function ===================== ##
 
 ## makeCacheMatrix() function works on a user-input matrix (x) and 
 ## its inverse(inv). It sets these values in cache memory for future 
@@ -66,6 +66,7 @@ makeCacheMatrix <- function(x=matrix())
 
 }
 
+
 ##======================= Lexical Scoping =========================== ##
 
 ## 'functionPointer' is a list variable, which stores the return value 
@@ -78,6 +79,7 @@ makeCacheMatrix <- function(x=matrix())
 
 functionPointer <- makeCacheMatrix()
 data <- NULL
+
 
 
 ##====================== cacheSolve() function ======================= ## 
