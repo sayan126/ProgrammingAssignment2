@@ -85,9 +85,9 @@ data <- NULL
 ## This function accepts a user-input matrix(x), calculates the inverse of
 ## this matrix, using the built-in R function solve(), and ultimately returns 
 ## this inverse matrix(inv). Before exiting the function, it stores the 
-## user-input matrix and its inverse in cache memory using the "<<-" operator
-## and calling the inner functions defined in the makeCacheMatrix() function.
-## The inner functions are accessed using the list variable, functionPointer.
+## user-input matrix and its inverse in cache memory, by using the "<<-" 
+## operator and calling the inner functions defined in the makeCacheMatrix() 
+## function (accessed using the list variable, "functionPointer").
 
 ## The cacheSolve() function also retrieves previously stored matrices and 
 ## and their inverse from cache memory. cacheSolve() function is orgainzed 
@@ -101,7 +101,7 @@ data <- NULL
 ## is retrieved using the "functionPointer" list variable and getinv() 
 ## inner function. 
 
-## Otherwise, if the currently input matrix(x) is different,  than the  
+## Otherwise, if the currently input matrix(x) is different  than the  
 ## cached matrix(data),  (in which case flag="newData"), the inverse is
 ## calculated using the solve() function. The newly input matrix and its 
 ## inverse is stored in cache memory, using the set() and setmean() inner 
