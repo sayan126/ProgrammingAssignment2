@@ -111,11 +111,9 @@ data <- NULL
 cacheSolve <- function(x,...)
 {
 
-## This section compares the input matrix to the previous matrix
-## If the two values are same, flag <- "oldData", in which case 
-## inverse matrix is retrieved from cache memory. If the values
-## are different, flag <- "newData", in which case the inverse 
-## of this new matrix is calculated
+## This section compares the current input matrix to the previous 
+## matrix stored in cache memory.If the two values are same, 
+## flag <- "oldData", otherwise flag <- "newData" 
 	
 	if(is.null(data) || nrow(data)!=nrow(x) || ncol(data)!=ncol(x))
 	{
@@ -144,7 +142,7 @@ cacheSolve <- function(x,...)
 
 	}
 	
-## Retrieving the inverse matrix from cache memory
+## Retrieving the inverse matrix from cache memory, when flag = oldData
 
 	inv <- functionPointer$getinv()
 	if(!is.null(inv) && flag=="oldData")
@@ -156,7 +154,7 @@ cacheSolve <- function(x,...)
 		return(inv)
 	}
 
-## Setting the new inverse matrix in cache memory
+## Setting the new inverse matrix in cache memory, when flag = newData
 	functionPointer$set(x)
 	cat("New matrix dataset has been set", "\n")
 	inv <- solve(data,...)

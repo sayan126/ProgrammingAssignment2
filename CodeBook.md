@@ -29,7 +29,7 @@ All functions and variables used in this code have been described as under.
   
   * `compare`: logical matrix, which compares the currently input matrix with the previous one. 
   
-  *  `flag`  : character vector, which indicates whether the currently input matrix is same as the previous one. `flag` = *oldData* if the current input *is* the same as previous input, otherwise `flag`= *newData*
+  *  `flag`  : character vector, which indicates whether the currently input matrix is same as the previous one. `flag` = *oldData* if the current input is *not* the same as previous input, otherwise `flag`= *newData*
 
   * `i`,`j`: Numeric scalars, used as loop variables
 
@@ -57,7 +57,7 @@ All functions and variables used in this code have been described as under.
     
     * *Step 3*: If `flag` = oldData and `inv` is not NULL, output cached data by returning the value of `inv`
 
-    * *Step 4*: If flag  = newData, calculate the value of the inverse matrix. Then store this value in *cache memory* and return the current inverse.
+    * *Step 4*: If `flag`  = newData, calculate the value of the inverse matrix. Then store this value in *cache memory* and return the current inverse.
 
 
   
